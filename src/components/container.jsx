@@ -5,6 +5,9 @@ import GamingGrowth from '../assets/images/image-gaming-growth.jpg'
 import GamingLogo1 from '../assets/images/image-gaming-growth.jpg'
 import GamingLogo2 from '../assets/images/image-retro-pcs.jpg'
 import GamingLogo3 from '../assets/images/image-top-laptops.jpg'
+import HamburgerMenu from '../assets/images/icon-menu.svg'
+import HamburgerClose from '../assets/images/icon-menu-close.svg'
+
 const container = () => {
     return (
         <div className='container'>
@@ -12,13 +15,14 @@ const container = () => {
                 <div className='logo'>
                     <img src={SiteLogo} alt='Site Logo' />
                 </div>
-                <nav>
+                <nav className='desktop-nav'>
                     <a href="">Home</a>
                     <a href="">New</a>
                     <a href="">Popular</a>
                     <a href="">Trending</a>
                     <a href="">Categories</a>
                 </nav>
+                <img src={HamburgerMenu} className='hamburger-menu-open' />
             </header>
             <main>
                 <section id="featured-new">
@@ -104,7 +108,20 @@ const container = () => {
                     </div>
                 </section>
             </main>
+            <div className='hamburger-menu-wrapper'>
+            <img src={HamburgerClose} className='hamburger-menu-open' />
+                <nav className='mobile-nav'>
+                    <a href='#'>Home</a>
+                    <a href='#'>New</a>
+                    <a href='#'>Popular</a>
+                    <a href='#'>Trending</a>
+                    <a href='#'>Categories</a>
 
+                </nav>
+                <div className='overlay'></div>
+
+            </div>
+        
         </div >
     )
 }
